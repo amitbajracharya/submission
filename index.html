@@ -1,23 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Estate &amp; Co. - Justice Through Precision</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<header>
-  <nav>
-    <a href="#">ESTATE &amp; CO.</a>
+<body class="home-page">
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">ESTATE &amp; CO.</a>
 
-    <ul>
-      <li><a href="#">Practice Areas</a></li>
-      <li><a href="#">Case Studies</a></li>
-      <li><a href="#">Legal Council</a></li>
-      <li><a href="#">Testimonials</a></li>
-    </ul>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="practice-areas.html">Practice Areas</a>
+      <a href="team.html">The Legal Council</a>
+      <a href="index.html#case-studies">Case Studies</a>
+      <a href="about.html">About Us</a>
+    </nav>
 
-    <a href="#">Consultation</a>
-  </nav>
+    <a class="contact-link" href="mailto:contact@estateandco.com">Contact</a>
+  </div>
 </header>
 
 <main>
@@ -32,7 +34,10 @@
     </div>
 
     <div>
-      <img src="images/legal-architectural-context.jpg" alt="Legal architectural context" />
+      <img
+        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+        alt="Modern glass office building viewed from below"
+      />
     </div>
   </section>
 
@@ -70,13 +75,17 @@
     </div>
   </section>
 
-  <section>
+  <section id="case-studies">
     <p>Track Record</p>
     <h2>Proven Precedents</h2>
 
     <div>
       <article>
-        <img src="images/institutional-trust.jpg" alt="Institutional trust" />
+        <img
+          src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
+          alt="Business documents arranged on a desk"
+          loading="lazy"
+        />
         <h3>Asset Protection Restructuring</h3>
         <p>
           Securing a $450M portfolio through complex offshore entity alignment and tax-neutral structural optimization.
@@ -84,7 +93,11 @@
       </article>
 
       <article>
-        <img src="images/structural-defense.jpg" alt="Structural defense" />
+        <img
+          src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
+          alt="Law books and a judge's gavel"
+          loading="lazy"
+        />
         <h3>Structural Liability Defense</h3>
         <p>
           Dismissal of high-stakes litigation for a Fortune 500 infrastructure client involving jurisdictional challenges.
@@ -99,32 +112,48 @@
 
     <div>
       <article>
-        <img src="images/marcus-thorne.jpg" alt="Marcus Thorne" />
+        <img
+          src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+          alt="Portrait representing Marcus Thorne"
+          loading="lazy"
+        />
         <h3>Marcus Thorne</h3>
         <p>Managing Partner</p>
       </article>
 
       <article>
-        <img src="images/elias-vance.jpg" alt="Elias Vance" />
+        <img
+          src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+          alt="Portrait representing Elias Vance"
+          loading="lazy"
+        />
         <h3>Elias Vance</h3>
         <p>Senior Counsel</p>
       </article>
 
       <article>
-        <img src="images/sarah-sterling.jpg" alt="Sarah Sterling" />
+        <img
+          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+          alt="Portrait representing Sarah Sterling"
+          loading="lazy"
+        />
         <h3>Sarah Sterling</h3>
         <p>Litigation Lead</p>
       </article>
 
       <article>
-        <img src="images/julian-cross.jpg" alt="Julian Cross" />
+        <img
+          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+          alt="Portrait representing Julian Cross"
+          loading="lazy"
+        />
         <h3>Julian Cross</h3>
         <p>Associate</p>
       </article>
     </div>
   </section>
 
-  <section>
+  <section id="testimonials">
     <p>Advocacy</p>
     <h2>Client Counsel</h2>
 
@@ -169,3 +198,4 @@
   <p>© 2024 Estate &amp; Co. Jurisprudence Defined.</p>
 </footer>
 </body>
+</html>
