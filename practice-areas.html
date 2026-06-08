@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Vanguard Legal corporate law services, practitioners, and related precedents."
+  />
+  <title>Corporate Law | Vanguard Legal</title>
+  <style>
+    :root {
+      --ink: #0a0a0a;
+      --muted: #575757;
+      --paper: #f8f8f7;
+      --line: #c5c5c1;
+      --soft-line: #dededb;
+      --max-width: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 68px), var(--max-width));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      margin: 0;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      min-height: 70px;
+      display: grid;
+      grid-template-columns: 240px 1fr 145px;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .logo {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .main-nav a {
+      position: relative;
+      padding: 25px 0 22px;
+      color: var(--muted);
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      color: var(--ink);
+    }
+
+    .main-nav a[aria-current="page"] {
+      font-weight: 700;
+    }
+
+    .main-nav a[aria-current="page"]::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 19px;
+      left: 0;
+      height: 1px;
+      background: var(--ink);
+    }
+
+    .consultation-link,
+    .primary-button {
+      display: inline-block;
+      background: var(--ink);
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-align: center;
+    }
+
+    .consultation-link {
+      padding: 7px 18px;
+    }
+
+    .page-header {
+      padding: 67px 0 61px;
+    }
+
+    .page-header h1 {
+      margin: 0 0 7px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(40px, 4vw, 50px);
+      line-height: 1;
+      letter-spacing: -0.035em;
+    }
+
+    .page-header p {
+      max-width: 680px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      line-height: 1.35;
+    }
+
+    .approach {
+      display: grid;
+      grid-template-columns: 31% 1fr;
+      gap: 70px;
+      padding: 63px 0 104px;
+      border-top: 1px solid var(--line);
+    }
+
+    .approach-copy {
+      max-width: 760px;
+    }
+
+    .approach-copy p {
+      margin: 0;
+      line-height: 1.62;
+    }
+
+    .approach-copy p + p {
+      margin-top: 18px;
+    }
+
+    .services {
+      padding-bottom: 68px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .services .eyebrow,
+    .practitioners .eyebrow,
+    .precedents .eyebrow {
+      margin-bottom: 30px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid #777;
+    }
+
+    .service-card {
+      min-height: 245px;
+      padding: 26px 25px 22px;
+    }
+
+    .service-card + .service-card {
+      border-left: 1px solid #777;
+    }
+
+    .service-card svg {
+      width: 26px;
+      height: 26px;
+      margin-bottom: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: square;
+      stroke-linejoin: miter;
+      stroke-width: 1.7;
+    }
+
+    .service-card h2 {
+      min-height: 55px;
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .practitioners {
+      padding: 67px 0 66px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .practitioner-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .portrait {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border: 1px solid var(--ink);
+      background:
+        linear-gradient(
+          to top right,
+          transparent calc(50% - 0.5px),
+          #cfcfcb 50%,
+          transparent calc(50% + 0.5px)
+        ),
+        linear-gradient(
+          to bottom right,
+          transparent calc(50% - 0.5px),
+          #cfcfcb 50%,
+          transparent calc(50% + 0.5px)
+        );
+    }
+
+    .practitioner-card h2 {
+      margin: 14px 0 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+
+    .practitioner-card p {
+      margin: 2px 0 0;
+      font-size: 8px;
+      letter-spacing: 0.08em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .precedents {
+      padding: 66px 0 76px;
+    }
+
+    .precedent-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .precedent-list li {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .precedent-list a {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: start;
+      gap: 30px;
+      padding: 0 3px 17px 0;
+    }
+
+    .precedent-list li + li a {
+      padding-top: 20px;
+    }
+
+    .precedent-list h2 {
+      margin: 0 0 3px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .precedent-list p {
+      max-width: 590px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .precedent-arrow {
+      padding-top: 2px;
+      font-size: 23px;
+      line-height: 1;
+    }
+
+    .call-to-action {
+      margin-bottom: 65px;
+      border: 1px solid #777;
+      padding: 65px 30px 63px;
+      text-align: center;
+    }
+
+    .call-to-action h2 {
+      margin: 0 0 9px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 39px;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+
+    .call-to-action p {
+      max-width: 570px;
+      margin: 0 auto;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .primary-button {
+      min-width: 305px;
+      margin-top: 27px;
+      padding: 13px 20px;
+    }
+
+    .site-footer {
+      border-top: 1px solid #777;
+    }
+
+    .footer-inner {
+      min-height: 165px;
+      display: grid;
+      grid-template-columns: 1fr 1.65fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .footer-brand p {
+      max-width: 330px;
+      margin: 13px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .footer-meta {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 48px 0 39px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .copyright {
+      margin: 0;
+      font-size: 10px;
+      text-align: right;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        width: min(calc(100% - 42px), var(--max-width));
+      }
+
+      .header-inner {
+        grid-template-columns: 1fr auto;
+      }
+
+      .main-nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: flex-start;
+        gap: 27px;
+        overflow-x: auto;
+      }
+
+      .main-nav a {
+        padding: 11px 0 16px;
+      }
+
+      .main-nav a[aria-current="page"]::after {
+        bottom: 11px;
+      }
+
+      .consultation-link {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .approach {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .service-card:nth-child(3) {
+        border-top: 1px solid #777;
+        border-left: 0;
+      }
+
+      .service-card:nth-child(4) {
+        border-top: 1px solid #777;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-top: 40px;
+      }
+
+      .footer-meta {
+        gap: 35px;
+        padding-top: 30px;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+
+      .copyright {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(calc(100% - 30px), var(--max-width));
+      }
+
+      .page-header {
+        padding-block: 52px;
+      }
+
+      .page-header h1 {
+        font-size: 40px;
+      }
+
+      .page-header p {
+        font-size: 18px;
+      }
+
+      .approach {
+        padding-block: 48px 65px;
+      }
+
+      .service-grid,
+      .practitioner-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card + .service-card {
+        border-top: 1px solid #777;
+        border-left: 0;
+      }
+
+      .practitioner-grid {
+        gap: 35px;
+      }
+
+      .portrait {
+        max-height: 540px;
+      }
+
+      .call-to-action {
+        padding-inline: 20px;
+      }
+
+      .call-to-action h2 {
+        font-size: 32px;
+      }
+
+      .primary-button {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">VANGUARD LEGAL</a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="practice-areas.html" aria-current="page">Practice Areas</a>
+        <a href="team.html">The Legal Council</a>
+        <a href="#precedents">Case Studies</a>
+        <a href="about.html">About Us</a>
+      </nav>
+
+      <a class="consultation-link" href="#consultation">Consultation</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-header" aria-labelledby="page-title">
+      <h1 id="page-title">Corporate Law</h1>
+      <p>
+        Navigating complex regulatory frameworks with surgical precision and
+        architectural foresight.
+      </p>
+    </section>
+
+    <section class="approach" aria-labelledby="approach-title">
+      <h2 class="eyebrow" id="approach-title">The Vanguard Approach</h2>
+      <div class="approach-copy">
+        <p>
+          In an era of unprecedented institutional scrutiny, corporate strategy
+          requires more than mere compliance—it demands structural integrity.
+          Vanguard Legal serves as the architectural foundation for global
+          enterprises, providing the legal scaffolding necessary to support
+          massive expansion while mitigating systemic risk.
+        </p>
+        <p>
+          Our methodology integrates corporate governance, mergers, and
+          institutional defense into a unified framework. We do not simply
+          respond to challenges; we design defensive architectures that
+          anticipate regulatory shifts and market volatility, ensuring our
+          clients maintain their operational trajectory with absolute
+          transparency.
+        </p>
+      </div>
+    </section>
+
+    <section class="services" aria-labelledby="services-title">
+      <h2 class="eyebrow" id="services-title">Specialized Services</h2>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M4 11h24L16 4 4 11ZM7 14v10M13 14v10M19 14v10M25 14v10M4 27h24"></path>
+          </svg>
+          <h2>M&amp;A Advisory</h2>
+          <p>
+            Strategic structural alignment for high-stakes acquisitions and
+            divestitures across international borders.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 4 24 7v7c0 6-3 10-8 14-5-4-8-8-8-14V7l8-3Z"></path>
+            <path d="m12 15 3 3 5-7"></path>
+          </svg>
+          <h2>Regulatory Compliance</h2>
+          <p>
+            A proactive defense system built to withstand rigorous
+            institutional oversight and legislative evolution.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="m5 23 7-7 5 4 9-11M21 9h5v5"></path>
+          </svg>
+          <h2>Venture Capital</h2>
+          <p>
+            Engineering the contractual frameworks that bridge innovative
+            disruption with institutional stability.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="8" cy="7" r="2.5"></circle>
+            <circle cx="24" cy="8" r="2.5"></circle>
+            <circle cx="9" cy="24" r="2.5"></circle>
+            <circle cx="22" cy="20" r="2.5"></circle>
+            <path d="m10 8 11 1M9 10v11M11 23l8-2M22 10v7M10 9l10 9"></path>
+          </svg>
+          <h2>Corporate Restructuring</h2>
+          <p>
+            Precision recalibration of organizational debt and operational
+            hierarchies to ensure long-term solvency.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="practitioners" aria-labelledby="practitioners-title">
+      <h2 class="eyebrow" id="practitioners-title">Expert Practitioners</h2>
+
+      <div class="practitioner-grid">
+        <article class="practitioner-card">
+          <div
+            class="portrait"
+            role="img"
+            aria-label="Portrait placeholder for Marcus Thorne"
+          ></div>
+          <h2>Marcus Thorne</h2>
+          <p>Managing Partner, M&amp;A</p>
+        </article>
+
+        <article class="practitioner-card">
+          <div
+            class="portrait"
+            role="img"
+            aria-label="Portrait placeholder for Helena Wu"
+          ></div>
+          <h2>Helena Wu</h2>
+          <p>Director of Regulatory Affairs</p>
+        </article>
+
+        <article class="practitioner-card">
+          <div
+            class="portrait"
+            role="img"
+            aria-label="Portrait placeholder for Elias Vance"
+          ></div>
+          <h2>Elias Vance</h2>
+          <p>Lead Counsel, Venture Capital</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="precedents" id="precedents" aria-labelledby="precedents-title">
+      <h2 class="eyebrow" id="precedents-title">Related Precedents</h2>
+
+      <ul class="precedent-list">
+        <li>
+          <a href="#">
+            <div>
+              <h2>The Ariscon Merger</h2>
+              <p>
+                Orchestrating a $4.2B cross-border acquisition involving
+                complex antitrust hurdles across three continents.
+              </p>
+            </div>
+            <span class="precedent-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>
+              <h2>Global Banking Defense</h2>
+              <p>
+                Securing a favorable resolution for a Tier-1 financial
+                institution facing systemic regulatory inquiries.
+              </p>
+            </div>
+            <span class="precedent-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section
+      class="call-to-action"
+      id="consultation"
+      aria-labelledby="consultation-title"
+    >
+      <h2 id="consultation-title">Initiate Counsel</h2>
+      <p>
+        Secure your institution's future with a bespoke legal architecture.
+        Schedule a confidential consultation with our Corporate Practice leads.
+      </p>
+      <a class="primary-button" href="mailto:consultation@vanguardlegal.com">
+        Schedule a Corporate Consultation
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">VANGUARD LEGAL</a>
+        <p>
+          Architects of Legal Integrity. Providing high-stakes advisory
+          services for global institutions and private enterprises.
+        </p>
+      </div>
+
+      <div class="footer-meta">
+        <nav class="footer-links" aria-label="Legal information">
+          <a href="#">Legal Notice</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Sitemap</a>
+        </nav>
+        <p class="copyright">
+          &copy; 2024 Vanguard Legal. All rights reserved. Professional Legal
+          Services.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
